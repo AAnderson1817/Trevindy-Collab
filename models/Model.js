@@ -1,4 +1,4 @@
-var mongoose = reqiure('mongoose');
+var mongoose = require('mongoose');
 
 var MenuItemSchema = mongoose.Schema({
   name: String,
