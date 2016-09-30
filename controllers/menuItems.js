@@ -47,7 +47,7 @@ module.exports = {
 
 addCondiments: function(req,res){
   Food.findById(req.params.id, function (err, condiment){
-    food.condiments.push(req.body.condiment)
+    food.condiments.push(req.body)
     condiments.save(function(err, condiment){
       res.json({message: "Troy's controller has shit on me", condiment:condiment})
     })
