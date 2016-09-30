@@ -1,4 +1,4 @@
-var express = route('express');
+var express = require('express');
 var router = express.Router();
 
 var controller = require('../controllers/menuItems.js');
