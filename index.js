@@ -2,11 +2,11 @@ var
   express = require('express')
   app = express()
   logger = require('morgan')
-  foodRoutes = require('/routes/food.js')
+  foodRoutes = require('./routes/menuItems.js')
   bodyParser = require('body-parser')
   mongoose = require('mongoose')
 
-  mongoose.connect('mongodb://localhost/independence', function(err)){
+  mongoose.connect('mongodb://localhost/independence', function(err){
     if(err) {
       console.log("Problem connecting to MONGO")}
       else {console.log("Connection established");}
