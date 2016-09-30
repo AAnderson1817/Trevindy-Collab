@@ -1,9 +1,9 @@
 var
-  express = require('express')
-  app = express()
-  logger = require('morgan')
-  foodRoutes = require('./routes/menuItems.js')
-  bodyParser = require('body-parser')
+  express = require('express'),
+  app = express(),
+  logger = require('morgan'),
+  foodRoutes = require('./routes/menuItems.js'),
+  bodyParser = require('body-parser'),
   mongoose = require('mongoose')
 
   mongoose.connect('mongodb://localhost/independence', function(err){
@@ -13,7 +13,6 @@ var
     })
 
 function passInfoToReq(req,res,next){
-  console.log(req);
   req.currentUser= "Trevindy"
   next()
 }
