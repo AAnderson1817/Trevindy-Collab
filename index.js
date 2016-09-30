@@ -21,7 +21,7 @@ function passInfoToReq(req,res,next){
 
 app.use(passInfoToReq)
 app.use(bodyParser.json())
-app.use('/', foodRoutes)
+app.use('/menu-item', foodRoutes)
 
 app.listen(3000,function(){
   console.log("Server running on 3000");

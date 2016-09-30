@@ -11,7 +11,7 @@ module.exports = {
   create: function(req, res){
     Item.create(req.body, function(err, item){
       if(err) {res.json({message: "A problem has occured with your cooking."})}
-      else req.json({message: "New item was created for menu..", item: item})
+      else res.json({message: "New item was created for menu..", item: item})
     })
   },
 
@@ -23,7 +23,7 @@ module.exports = {
 
   update: function(req, res){
     Item.findByIdAndUpdate(req.params.id, req.body, {new: true}, function(err, item){
-      req.json({message: "Your recipe was updated!", item: item})
+      res.json({message: "Your recipe was updated!", item: item})
     })
   },
 
