@@ -32,6 +32,15 @@ module.exports = {
       if(err) res.json({message: "Couldnt remove Item from Menu."})
       else res.json({message: "Item removed from Menu"})
     })
+  },
+
+  addCondiments: function(req, res){
+    Item.findById(req.params.id, function(err, item){
+      item.condiments.push(req.body.condiment)
+      item.save(function(err, item){
+        res.json({message: "Added condiment.", item: item})
+      })
+    })
   }
 
 }
